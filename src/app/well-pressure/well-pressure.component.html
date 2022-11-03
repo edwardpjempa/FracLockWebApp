@@ -1,0 +1,193 @@
+<div class="root">
+  <p *ngFor="let todo of pressures">
+    {{ todo["value"] }}
+  </p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3 wellPressureCol">
+        <div class="wellPressure wellPressure1">
+          <div class="container">
+            <div class="row justify-content-center" style="margin: 0">
+              <div class="col-auto">
+                <h1 class="number">#1</h1>
+                <h6 class="wellPressureLabel">WELL PRESSURE</h6>
+              </div>
+            </div>
+            <div
+              class="row justify-content-end"
+              style="background-color: white; margin: 0; padding-top: 10px"
+            >
+              <div class="col-auto" style="margin-top: 10px">
+                <h5 [innerHTML]="this.single[0]['value'] + ' PSI'"></h5>
+              </div>
+              <div class="col-auto">
+                <button class="ZeroButton">ZERO</button>
+              </div>
+            </div>
+            <div
+              class="row"
+              style="background-color: white; margin: 0"
+              #containerRef
+            >
+              <ngx-charts-bar-vertical
+                [view]="[containerRef.offsetWidth - 15, 725]"
+                [scheme]="colorScheme"
+                [results]="[
+                  {
+                    name: '',
+                    value: this.single[0]['value']
+                  }
+                ]"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                [yScaleMax]="15000"
+              >
+              </ngx-charts-bar-vertical>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 wellPressureCol">
+        <div class="wellPressure wellPressure2">
+          <div class="container">
+            <div class="row justify-content-center" style="margin: 0">
+              <div class="col-auto">
+                <h1 class="number">#2</h1>
+                <h6 class="wellPressureLabel">WELL PRESSURE</h6>
+              </div>
+            </div>
+            <div
+              class="row justify-content-end"
+              style="background-color: white; margin: 0; padding-top: 10px"
+            >
+              <div class="col-auto" style="margin-top: 10px">
+                <h5 [innerHTML]="this.single[1]['value'] + ' PSI'"></h5>
+              </div>
+              <div class="col-auto">
+                <button class="ZeroButton">ZERO</button>
+              </div>
+            </div>
+            <div class="row" style="background-color: white; margin: 0">
+              <ngx-charts-bar-vertical
+                [view]="[containerRef.offsetWidth - 15, 725]"
+                [scheme]="colorScheme"
+                [results]="[
+                  {
+                    name: '',
+                    value: this.single[1]['value']
+                  }
+                ]"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                [yScaleMax]="15000"
+              >
+              </ngx-charts-bar-vertical>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 wellPressureCol">
+        <div class="wellPressure wellPressure3">
+          <div class="container">
+            <div class="row justify-content-center" style="margin: 0">
+              <div class="col-auto">
+                <h1 class="number">#3</h1>
+                <h6 class="wellPressureLabel">WELL PRESSURE</h6>
+              </div>
+            </div>
+            <div
+              class="row justify-content-end"
+              style="background-color: white; margin: 0; padding-top: 10px"
+            >
+              <div class="col-auto" style="margin-top: 10px">
+                <h5 [innerHTML]="this.single[2]['value'] + ' PSI'"></h5>
+              </div>
+              <div class="col-auto">
+                <button class="ZeroButton">ZERO</button>
+              </div>
+            </div>
+            <div class="row" style="background-color: white; margin: 0">
+              <ngx-charts-bar-vertical
+                [view]="[containerRef.offsetWidth - 15, 725]"
+                [scheme]="colorScheme"
+                [results]="[
+                  {
+                    name: '',
+                    value: this.single[2]['value']
+                  }
+                ]"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                [yScaleMax]="15000"
+              >
+              </ngx-charts-bar-vertical>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 wellPressureCol">
+        <div class="wellPressure wellPressure4">
+          <div class="container">
+            <div class="row justify-content-center" style="margin: 0">
+              <div class="col-auto">
+                <h1 class="number">#4</h1>
+                <h6 class="wellPressureLabel">WELL PRESSURE</h6>
+              </div>
+            </div>
+            <div
+              class="row justify-content-end"
+              style="background-color: white; margin: 0; padding-top: 10px"
+            >
+              <div class="col-auto" style="margin-top: 10px">
+                <h5 [innerHTML]="this.single[3]['value'] + ' PSI'"></h5>
+              </div>
+              <div class="col-auto">
+                <button class="ZeroButton">ZERO</button>
+              </div>
+            </div>
+            <div class="row" style="background-color: white; margin: 0">
+              <ngx-charts-bar-vertical
+                [view]="[containerRef.offsetWidth - 15, 725]"
+                [scheme]="colorScheme"
+                [results]="[
+                  {
+                    name: '',
+                    value: this.single[3]['value']
+                  }
+                ]"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                [yScaleMax]="15000"
+              >
+              </ngx-charts-bar-vertical>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

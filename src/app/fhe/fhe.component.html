@@ -1,0 +1,15 @@
+<nav class="navBackground">
+    <a routerLink="/"> FHE </a>
+    <a routerLink="#" (click)="showWellPressure()"  > Well Pressure</a>
+    <a routerLink="#" (click)="showQuickTest()"> Quick Test Sub <br> Set Pressure</a>
+    <a routerLink="#"> Auxiliary <br> Set Pressure</a>
+    <a routerLink="#"> System Status</a>
+    <a routerLink="#"> Settings</a>
+    <a routerLink="#"> Alarms</a>
+</nav>
+<div id="comp-render" *ngIf="displayWellPressure">
+    <app-well-pressure></app-well-pressure>
+</div>
+<div id="comp-render" *ngIf="displayQuickTest">
+    <app-quick-test></app-quick-test>
+</div>

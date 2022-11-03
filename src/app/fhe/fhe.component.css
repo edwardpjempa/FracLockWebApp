@@ -1,0 +1,22 @@
+.navBackground {
+    background-color: #F4F8F9;
+    overflow: hidden;
+    margin-top: 5px;
+    min-width: 1500px;
+}
+
+a {
+    font-weight: 700;
+    float: left;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px 0px 10px;
+    background-color: #39497D;
+    width: 190px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
