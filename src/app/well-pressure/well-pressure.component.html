@@ -1,11 +1,8 @@
 <div class="root">
-  <p *ngFor="let todo of pressures">
-    {{ todo["value"] }}
-  </p>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="roww" style="flex-wrap: nowrap; overflow-x:auto; width:100vw;">
       <div class="col-3 wellPressureCol">
-        <div class="wellPressure wellPressure1">
+        <div class="wellPressure wellPressure1" #colRef>
           <div class="container">
             <div class="row justify-content-center" style="margin: 0">
               <div class="col-auto">
@@ -18,7 +15,7 @@
               style="background-color: white; margin: 0; padding-top: 10px"
             >
               <div class="col-auto" style="margin-top: 10px">
-                <h5 [innerHTML]="this.single[0]['value'] + ' PSI'"></h5>
+                <h5 [innerHTML]="this.pressures[0]['value'] + ' PSI'"></h5>
               </div>
               <div class="col-auto">
                 <button class="ZeroButton">ZERO</button>
@@ -30,12 +27,15 @@
               #containerRef
             >
               <ngx-charts-bar-vertical
-                [view]="[containerRef.offsetWidth - 15, 725]"
+                [view]="[
+                  containerRef.offsetWidth - 15,
+                  colRef.offsetHeight - 130
+                ]"
                 [scheme]="colorScheme"
                 [results]="[
                   {
                     name: '',
-                    value: this.single[0]['value']
+                    value: this.pressures[0]['value']
                   }
                 ]"
                 [gradient]="gradient"
@@ -67,7 +67,7 @@
               style="background-color: white; margin: 0; padding-top: 10px"
             >
               <div class="col-auto" style="margin-top: 10px">
-                <h5 [innerHTML]="this.single[1]['value'] + ' PSI'"></h5>
+                <h5 [innerHTML]="this.pressures[1]['value'] + ' PSI'"></h5>
               </div>
               <div class="col-auto">
                 <button class="ZeroButton">ZERO</button>
@@ -75,12 +75,15 @@
             </div>
             <div class="row" style="background-color: white; margin: 0">
               <ngx-charts-bar-vertical
-                [view]="[containerRef.offsetWidth - 15, 725]"
+                [view]="[
+                  containerRef.offsetWidth - 15,
+                  colRef.offsetHeight - 130
+                ]"
                 [scheme]="colorScheme"
                 [results]="[
                   {
                     name: '',
-                    value: this.single[1]['value']
+                    value: this.pressures[1]['value']
                   }
                 ]"
                 [gradient]="gradient"
@@ -112,7 +115,7 @@
               style="background-color: white; margin: 0; padding-top: 10px"
             >
               <div class="col-auto" style="margin-top: 10px">
-                <h5 [innerHTML]="this.single[2]['value'] + ' PSI'"></h5>
+                <h5 [innerHTML]="this.pressures[2]['value'] + ' PSI'"></h5>
               </div>
               <div class="col-auto">
                 <button class="ZeroButton">ZERO</button>
@@ -120,12 +123,15 @@
             </div>
             <div class="row" style="background-color: white; margin: 0">
               <ngx-charts-bar-vertical
-                [view]="[containerRef.offsetWidth - 15, 725]"
+                [view]="[
+                  containerRef.offsetWidth - 15,
+                  colRef.offsetHeight - 130
+                ]"
                 [scheme]="colorScheme"
                 [results]="[
                   {
                     name: '',
-                    value: this.single[2]['value']
+                    value: this.pressures[2]['value']
                   }
                 ]"
                 [gradient]="gradient"
@@ -157,7 +163,7 @@
               style="background-color: white; margin: 0; padding-top: 10px"
             >
               <div class="col-auto" style="margin-top: 10px">
-                <h5 [innerHTML]="this.single[3]['value'] + ' PSI'"></h5>
+                <h5 [innerHTML]="this.pressures[3]['value'] + ' PSI'"></h5>
               </div>
               <div class="col-auto">
                 <button class="ZeroButton">ZERO</button>
@@ -165,12 +171,15 @@
             </div>
             <div class="row" style="background-color: white; margin: 0">
               <ngx-charts-bar-vertical
-                [view]="[containerRef.offsetWidth - 15, 725]"
+                [view]="[
+                  containerRef.offsetWidth - 15,
+                  colRef.offsetHeight - 130
+                ]"
                 [scheme]="colorScheme"
                 [results]="[
                   {
                     name: '',
-                    value: this.single[3]['value']
+                    value: this.pressures[3]['value']
                   }
                 ]"
                 [gradient]="gradient"

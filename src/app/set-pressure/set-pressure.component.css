@@ -1,0 +1,58 @@
+.progress {
+    position: relative;
+    z-index: 5;
+  
+    background: #484848;
+    border: 10px solid #282828;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 5px 17px rgba(40, 40, 40, 0.5),
+      0 0 3px 1px rgba(40, 40, 40, 0.5) inset;
+  }
+  .progress-text {
+    position: absolute;
+    font: bold 14px/20px Arial;
+    text-align: center;
+    top: 0;
+    left: 0;
+    user-select: none;
+  }
+  .progress,
+  .progress-bar,
+  .progress-text {
+    width: 200px;
+    max-width: 200px;
+    height: 200px;
+  }
+  .progress .progress-text:first-child {
+    z-index: 5;
+    color: white;
+  }
+  .progress .progress-text:last-child {
+    z-index: 10;
+    color: black;
+  }
+  .progress-bar {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    border-radius: 12px;
+    width: 100%;
+    -moz-transition: width 0.2s linear;
+    -webkit-transition: width 0.2s linear;
+    -o-transition: width 0.2s linear;
+    transition: width 0.2s linear;
+  }
+  
+  /* Aqua Style */
+  .progress.aqua .progress-bar {
+    background-color: #00baba;
+    background-image: -moz-linear-gradient(left, #d1fffb 0%, #00baba 100%);
+    background-image: -webkit-linear-gradient(left, #d1fffb 0%, #00baba 100%);
+    background-image: -o-linear-gradient(left, #d1fffb 0%, #00baba 100%);
+    background-image: -ms-linear-gradient(left, #d1fffb 0%, #00baba 100%);
+    background-image: linear-gradient(to right, #d1fffb 0%, #00baba 100%);
+    background-size: 200px 20px;
+  }
+  

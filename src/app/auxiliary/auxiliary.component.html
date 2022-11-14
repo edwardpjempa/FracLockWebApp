@@ -1,0 +1,124 @@
+<div class="root">
+    <div class="container-fluid">
+      <div class="row justify-content-center" style="flex-wrap: nowrap; overflow-x:auto; width:100vw;" id="roww">
+        <div class="col-lg-6 col-md-6 col-sm-6 wellPressureCol" #colRef>
+          <div class="wellPressure QuickTestSub">
+            <div class="container">
+              <div class="row justify-content-between" style="margin: 0">
+                <div class="col-auto auxSmall" > <button class="AUX AUXA">AUX A</button></div>
+                <div class="col-auto auxSmall" style="text-align: center">
+                  <h4
+                    class="QuickTestSubLabel"
+                    style="color: white; margin-bottom: 2px"
+                  >
+                    AUXILIARY
+                  </h4>
+                  <h5
+                    class="QuickTestSubLabel"
+                    style="color: white; margin-top: 4px"
+                  >
+                    SET PRESSURE
+                  </h5>
+                </div>
+                <div class="col-auto auxSmall"> <button class="AUX AUXB">AUX B</button></div>
+
+              </div>
+              <div
+                class="row justify-content-end"
+                style="background-color: white; margin: 0; padding-top: 10px"
+              >
+                <div class="col-auto" style="margin-top: 10px">
+                  <h5 [innerHTML]="this.pressures[0]['value'] + ' PSI'"></h5>
+                </div>
+                <div class="col-auto">
+                  <button class="ZeroButton">ZERO</button>
+                </div>
+              </div>
+              <div
+                class="row"
+                style="background-color: white; margin: 0"
+                #containerRef
+              >
+                <ngx-charts-bar-vertical
+                  [view]="[containerRef.offsetWidth - 15, colRef.offsetHeight-145]"
+                  [scheme]="colorScheme"
+                  [results]="[
+                    {
+                      name: '',
+                      value: this.pressures[0]['value']
+                    }
+                  ]"
+                  [gradient]="gradient"
+                  [xAxis]="showXAxis"
+                  [yAxis]="showYAxis"
+                  [legend]="showLegend"
+                  [showXAxisLabel]="showXAxisLabel"
+                  [showYAxisLabel]="showYAxisLabel"
+                  [xAxisLabel]="xAxisLabel"
+                  [yAxisLabel]="yAxisLabel"
+                  [yScaleMax]="15000"
+                >
+                </ngx-charts-bar-vertical>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 wellPressureCol">
+            <div class="wellPressure ActualPressure">
+              <div class="container">
+                <div class="row" style="margin: 0; justify-content: center;">
+                  <div class="col-auto" style="text-align: center">
+                    <h4
+                      class="QuickTestSubLabel"
+                      style="color: navy; margin-bottom: 2px"
+                    >
+                      AUXILIARY
+                    </h4>
+                    <h5
+                      class="QuickTestSubLabel"
+                      style="color: navy;  margin-top: 4px"
+                    >
+                      ACTUAL PRESSURE
+                    </h5>
+                  </div>
+                </div>
+                <div
+                  class="row justify-content-end"
+                  style="background-color: white; margin: 0; padding-top: 10px"
+                >
+                  <div class="col-auto" style="margin-top: 10px">
+                    <h5 [innerHTML]="this.pressures[0]['value'] + ' PSI'"></h5>
+                  </div>
+                </div>
+                <div
+                  class="row"
+                  style="background-color: white; margin: 0"
+                  #containerRef
+                >
+                  <ngx-charts-bar-vertical
+                    [view]="[containerRef.offsetWidth - 15, colRef.offsetHeight-145]"
+                    [scheme]="colorScheme"
+                    [results]="[
+                      {
+                        name: '',
+                        value: this.pressures[0]['value']
+                      }
+                    ]"
+                    [gradient]="gradient"
+                    [xAxis]="showXAxis"
+                    [yAxis]="showYAxis"
+                    [legend]="showLegend"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxisLabel]="xAxisLabel"
+                    [yAxisLabel]="yAxisLabel"
+                    [yScaleMax]="15000"
+                  >
+                  </ngx-charts-bar-vertical>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  

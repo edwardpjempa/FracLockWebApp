@@ -1,0 +1,41 @@
+.navBackground {
+    background-color: #F4F8F9;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: auto;
+    margin-top: 76px;
+}
+
+button {
+    font-weight: 700;
+    float: left;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px 0px 10px;
+    background-color: #39497D;
+    width: 190px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  a {
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px 0px 10px;
+    background-color: #39497D;
+    min-width: 180px;
+    height: 120px;
+    max-width: 210px;
+    height: 90px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 6px;
+    padding: 31px 18px;
+  }

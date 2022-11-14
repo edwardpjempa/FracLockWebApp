@@ -1,0 +1,40 @@
+<div class="container text-center" *ngIf="!isThereUser()" (keypress)="onEnter($event, email.value, userPassword.value)">
+  <div class="row justify-content-center align-items-center" style="margin-top: 200px;">
+    <div class="col-auto" style="background-color: white; border-style: solid; border-radius: 33px; padding: 50px 50px 40px 50px; border-color: rgb(169, 169, 169);">
+      <div class="mb-3" >
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          #email
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Password</label
+        >
+        <input
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          type="password"
+          placeholder="Password"
+          #userPassword
+        />
+      </div>
+      <!-- Calling SignIn Api from AuthService -->
+      <div class="formGroup">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          (click)="signIn(email.value, userPassword.value)"
+        >Log in</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-system *ngIf="isThereUser()"></app-system>

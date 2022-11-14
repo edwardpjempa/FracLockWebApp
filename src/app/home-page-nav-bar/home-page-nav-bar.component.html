@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg bg-light" style="position: fixed; top: 0; width: 100%;">
+  <div class="container-fluid">
+    <a routerLink="/"> <img src="../../assets/FHE.png" height="60" width="110"/> </a>
+      <ul class="navbar-nav me-auto " style="flex-direction: row;">
+        <li class="nav-item">
+          <a class="nav-link" href="/" style="padding-right: var(--bs-navbar-nav-link-padding-x);
+          padding-left: var(--bs-navbar-nav-link-padding-x);">Systems</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="userList" style="padding-right: var(--bs-navbar-nav-link-padding-x);
+          padding-left: var(--bs-navbar-nav-link-padding-x);">User List</a>
+        </li>
+      </ul>
+      <button class="btn" style="float: right; background-color: #39497d; color: white; font-weight: 520;"  (click)="logOut()"> Logout</button>
+    </div>
+</nav>

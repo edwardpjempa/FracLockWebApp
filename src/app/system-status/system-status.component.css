@@ -1,0 +1,38 @@
+.box {
+    border-width: 15px;
+    border-style: solid;    
+}
+
+.col4{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.topTierBoxes {
+    height: 350px;
+    display: flex;
+
+}
+
+.boxCellular {
+    border-color: lightgreen;
+}
+
+.boxPressure {
+    border-color: rgb(53, 168, 203);
+}
+
+.boxLighting {
+    border-color: rgb(200, 30, 30);
+}
+
+.boxHours {
+    border-color: rgb(231, 159, 50);
+}
+
+.boxFilter {
+    border-color: rgb(241, 34, 34);
+}
+.boxTemp {
+    border-color: rgb(16, 195, 52);
+}

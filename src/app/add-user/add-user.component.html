@@ -1,0 +1,284 @@
+<div class="container text-center" style="margin-top: 130px;  min-width: 1200px;" class="desktop">
+  <div class="row justify-content-around align-items-center">
+    <div class="col-5">
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 20px; font-weight: 520"
+          >First Name</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="First Name"
+          #firstName
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 20px; font-weight: 520"
+          >Last Name</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Last Name"
+          #lastName
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 20px; font-weight: 520"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          autocomplete="off"
+          #email
+        />
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="mb-3">
+        <label
+          for="exampleFormControlTextarea1"
+          class="form-label"
+          style="color: white; font-size: 20px; font-weight: 520"
+          >Password</label
+        >
+        <input
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          type="password"
+          placeholder="Password"
+          autocomplete="off"
+          #userPassword
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlTextarea1"
+          class="form-label"
+          style="color: white; font-size: 20px; font-weight: 520"
+          >Repeat Password</label
+        >
+        <input
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          type="password"
+          placeholder="Repeat Password"
+          #repeatPassword
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 20px; font-weight: 520"
+          >Organization</label
+        >
+        <select
+        (change)="setOrganization($event)"
+        class="form-select"
+        aria-label="Default select example"
+        #organization
+      >
+        <option value='' selected>Select Organization</option>
+        <option *ngFor="let organization of organizations" [value]="organization['organization']">{{organization['organization']}}</option>
+      </select>
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 20px; font-weight: 520"
+          >Role</label
+        >
+        <select
+          (change)="setRole($event)"
+          class="form-select"
+          aria-label="Default select example"
+          #role
+        >
+          <option value="" selected>Select Role</option>
+          <option *ngFor="let role of availableRoles" [value]="role">{{role}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="
+          createUser(
+            email.value,
+            userPassword.value,
+            repeatPassword.value,
+            firstName.value,
+            lastName.value,
+            organization.value
+          )
+        "
+      >
+        Sign up
+      </button>
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+<div class="container text-center" style="margin-top: 130px;" class="phone">
+  <div class="row justify-content-around align-items-center">
+    <div class="col-10">
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 17px; font-weight: 520"
+          >First Name</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="First Name"
+          #firstName
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 17px; font-weight: 520"
+          >Last Name</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Last Name"
+          #lastName
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 17px; font-weight: 520"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          autocomplete="off"
+          #email
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlTextarea1"
+          class="form-label"
+          style="color: white; font-size: 17px; font-weight: 520"
+          >Password</label
+        >
+        <input
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          type="password"
+          placeholder="Password"
+          autocomplete="off"
+          #userPassword
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlTextarea1"
+          class="form-label"
+          style="color: white; font-size: 17px; font-weight: 520"
+          >Repeat Password</label
+        >
+        <input
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          type="password"
+          placeholder="Repeat Password"
+          #repeatPassword
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 17px; font-weight: 520"
+          >Organization</label
+        >
+        <select
+        (change)="setOrganization($event)"
+        class="form-select"
+        aria-label="Default select example"
+        #organization
+      >
+        <option value='' selected>Select Organization</option>
+        <option *ngFor="let organization of organizations" [value]="organization['organization']">{{organization['organization']}}</option>
+      </select>
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label"
+          style="color: white; font-size: 17px; font-weight: 520"
+          >Role</label
+        >
+        <select
+          (change)="setRole($event)"
+          class="form-select"
+          aria-label="Default select example"
+          #role
+        >
+          <option value="" selected>Select Role</option>
+          <option *ngFor="let role of availableRoles" [value]="role">{{role}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="
+          createUser(
+            email.value,
+            userPassword.value,
+            repeatPassword.value,
+            firstName.value,
+            lastName.value,
+            organization.value
+          )
+        "
+      >
+        Sign up
+      </button>
+    </div>
+  </div>
+</div>
+

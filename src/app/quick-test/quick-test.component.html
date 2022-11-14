@@ -1,1 +1,262 @@
-<p>quick-test works!</p>
+<div class="container-fluid" style="margin-top: 30px">
+  <div class="row" style="flex-wrap: nowrap; overflow-x:auto; width:100vw;">
+    <div class="col-auto wellPressureCol">
+      <div class="wellPressure QuickTestSub" #colRef>
+        <div class="container">
+          <div class="row justify-content-center" style="margin: 0">
+            <div class="col-auto" style="text-align: center">
+              <h6
+                class="QuickTestSubLabel"
+                style="color: white; margin-bottom: 2px"
+              >
+                QUICK TEST SUB (EAS)
+              </h6>
+              <h6
+                class="QuickTestSubLabel"
+                style="color: white; font-size: 0.8rem; margin-top: 4px"
+              >
+                MAX LIMIT PRESSURE
+              </h6>
+            </div>
+          </div>
+          <div
+            class="row justify-content-end"
+            style="background-color: white; margin: 0; padding-top: 10px"
+          >
+            <div class="col-auto" style="margin-top: 10px">
+              <h5 [innerHTML]="this.pressures[0]['value'] + ' PSI'"></h5>
+            </div>
+            <div class="col-auto">
+              <button class="ZeroButton">ZERO</button>
+            </div>
+          </div>
+          <div
+            class="row"
+            style="background-color: white; margin: 0"
+            #containerRef
+          >
+            <ngx-charts-bar-vertical
+              [view]="[
+                containerRef.offsetWidth - 15,
+                colRef.offsetHeight - 130
+              ]"
+              [scheme]="colorScheme"
+              [results]="[
+                {
+                  name: '',
+                  value: this.pressures[0]['value']
+                }
+              ]"
+              [gradient]="gradient"
+              [xAxis]="showXAxis"
+              [yAxis]="showYAxis"
+              [legend]="showLegend"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              [xAxisLabel]="xAxisLabel"
+              [yAxisLabel]="yAxisLabel"
+              [yScaleMax]="15000"
+            >
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-auto wellPressureCol">
+      <div class="wellPressure wellPressure1">
+        <div class="container">
+          <div class="row justify-content-center" style="margin: 0">
+            <div class="col-auto">
+              <h1 class="number">#1</h1>
+              <h6 class="wellPressureLabel">QUICK TEST SUB ACTUAL PRESSURE</h6>
+            </div>
+          </div>
+          <div
+            class="row justify-content-end"
+            style="background-color: white; margin: 0; padding-top: 10px"
+          >
+            <div class="col-auto" style="margin-top: 10px">
+              <h5 [innerHTML]="this.pressures[0]['value'] + ' PSI'"></h5>
+            </div>
+            <div class="col-auto">
+              <button class="ZeroButton">ZERO</button>
+            </div>
+          </div>
+          <div
+            class="row"
+            style="background-color: white; margin: 0"
+            #containerRef
+          >
+            <ngx-charts-bar-vertical
+              [view]="[
+                containerRef.offsetWidth - 15,
+                colRef.offsetHeight - 130
+              ]"
+              [scheme]="colorScheme"
+              [results]="[
+                {
+                  name: '',
+                  value: this.pressures[0]['value']
+                }
+              ]"
+              [gradient]="gradient"
+              [xAxis]="showXAxis"
+              [yAxis]="showYAxis"
+              [legend]="showLegend"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              [xAxisLabel]="xAxisLabel"
+              [yAxisLabel]="yAxisLabel"
+              [yScaleMax]="15000"
+            >
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-auto wellPressureCol">
+      <div class="wellPressure wellPressure2">
+        <div class="container">
+          <div class="row justify-content-center" style="margin: 0">
+            <div class="col-auto">
+              <h1 class="number">#2</h1>
+              <h6 class="wellPressureLabel">QUICK TEST SUB ACTUAL PRESSURE</h6>
+            </div>
+          </div>
+          <div
+            class="row justify-content-end"
+            style="background-color: white; margin: 0; padding-top: 10px"
+          >
+            <div class="col-auto" style="margin-top: 10px">
+              <h5 [innerHTML]="this.pressures[1]['value'] + ' PSI'"></h5>
+            </div>
+            <div class="col-auto">
+              <button class="ZeroButton">ZERO</button>
+            </div>
+          </div>
+          <div class="row" style="background-color: white; margin: 0">
+            <ngx-charts-bar-vertical
+              [view]="[
+                containerRef.offsetWidth - 15,
+                colRef.offsetHeight - 130
+              ]"
+              [scheme]="colorScheme"
+              [results]="[
+                {
+                  name: '',
+                  value: this.pressures[1]['value']
+                }
+              ]"
+              [gradient]="gradient"
+              [xAxis]="showXAxis"
+              [yAxis]="showYAxis"
+              [legend]="showLegend"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              [xAxisLabel]="xAxisLabel"
+              [yAxisLabel]="yAxisLabel"
+              [yScaleMax]="15000"
+            >
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-auto wellPressureCol">
+      <div class="wellPressure wellPressure3">
+        <div class="container">
+          <div class="row justify-content-center" style="margin: 0">
+            <div class="col-auto">
+              <h1 class="number">#3</h1>
+              <h6 class="wellPressureLabel">QUICK TEST SUB ACTUAL PRESSURE</h6>
+            </div>
+          </div>
+          <div
+            class="row justify-content-end"
+            style="background-color: white; margin: 0; padding-top: 10px"
+          >
+            <div class="col-auto" style="margin-top: 10px">
+              <h5 [innerHTML]="this.pressures[2]['value'] + ' PSI'"></h5>
+            </div>
+            <div class="col-auto">
+              <button class="ZeroButton">ZERO</button>
+            </div>
+          </div>
+          <div class="row" style="background-color: white; margin: 0">
+            <ngx-charts-bar-vertical
+              [view]="[
+                containerRef.offsetWidth - 15,
+                colRef.offsetHeight - 130
+              ]"
+              [scheme]="colorScheme"
+              [results]="[
+                {
+                  name: '',
+                  value: this.pressures[2]['value']
+                }
+              ]"
+              [gradient]="gradient"
+              [xAxis]="showXAxis"
+              [yAxis]="showYAxis"
+              [legend]="showLegend"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              [xAxisLabel]="xAxisLabel"
+              [yAxisLabel]="yAxisLabel"
+              [yScaleMax]="15000"
+            >
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-auto wellPressureCol">
+      <div class="wellPressure wellPressure4">
+        <div class="container">
+          <div class="row justify-content-center" style="margin: 0">
+            <div class="col-auto">
+              <h1 class="number">#4</h1>
+              <h6 class="wellPressureLabel">QUICK TEST SUB ACTUAL PRESSURE</h6>
+            </div>
+          </div>
+          <div
+            class="row justify-content-end"
+            style="background-color: white; margin: 0; padding-top: 10px"
+          >
+            <div class="col-auto" style="margin-top: 10px">
+              <h5 [innerHTML]="this.pressures[3]['value'] + ' PSI'"></h5>
+            </div>
+            <div class="col-auto">
+              <button class="ZeroButton">ZERO</button>
+            </div>
+          </div>
+          <div class="row" style="background-color: white; margin: 0">
+            <ngx-charts-bar-vertical
+              [view]="[
+                containerRef.offsetWidth - 15,
+                colRef.offsetHeight - 130
+              ]"
+              [scheme]="colorScheme"
+              [results]="[
+                {
+                  name: '',
+                  value: this.pressures[3]['value']
+                }
+              ]"
+              [gradient]="gradient"
+              [xAxis]="showXAxis"
+              [yAxis]="showYAxis"
+              [legend]="showLegend"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              [xAxisLabel]="xAxisLabel"
+              [yAxisLabel]="yAxisLabel"
+              [yScaleMax]="15000"
+            >
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

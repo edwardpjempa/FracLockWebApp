@@ -9,3 +9,35 @@
 .root {
     margin-top: 100px;
 }
+.deviceTD{
+    padding-left: 30px;
+}
+
+.pressureTD {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+th, td{
+    height: 45px;
+    font-size: larger; 
+    white-space: nowrap;
+
+}
+
+td{
+    color: rgb(101, 101, 101);
+    font-size: larger;
+    font-weight: 500;
+}
+
+table{
+    width: auto; margin-left: 15px; margin-right: 40px;
+}
+
+
+@media only screen and (max-width: 800px){
+    table {
+        width: auto; margin-left: 0px; margin-right: 40px;
+    }
+}

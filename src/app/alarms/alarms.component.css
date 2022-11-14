@@ -1,0 +1,16 @@
+table, th,td {
+    border: solid 1px #000;
+  padding: 10px;
+  
+}
+
+.tablee{
+  min-width: 600px;
+}
+
+button {
+     display: block;
+     margin: 0px 0px 6px 0px;
+     width: 130px;
+     height: 40px
+}

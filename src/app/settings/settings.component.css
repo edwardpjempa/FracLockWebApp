@@ -1,0 +1,32 @@
+.borderBlue {
+    border-style: solid;
+    border-color: rgb(0, 162, 255);
+    border-width: 15px;
+}
+
+.courseZeroBox { 
+    padding-top: 50px;
+    padding-left: 30px;
+    height: 200px;
+}
+
+.middleTwoBoxes {
+    height: 170px;
+}
+
+.wellPressureCol {
+    height: 64vh;
+    min-width: 330px;
+    max-width: 460px;
+    padding: 0;
+  }
+
+@media only screen and (max-width: 600px) and (max-height: 800px) {
+    .wellPressureCol {
+      height: 79vh;
+      min-width: 320px;
+      max-width: 410px;
+      padding: 0;
+    }
+  }
+  

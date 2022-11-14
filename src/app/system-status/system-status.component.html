@@ -1,0 +1,311 @@
+<div (window:resize)="onResize($event)"
+  class="container-fluid "
+  style="margin-top: 30px; overflow-y: hidden; overflow-x: scroll; text-align: center;"
+>
+  <div
+    class="row"
+    style="
+      padding-bottom: 20px;
+      white-space: nowrap;
+      width: auto;
+    "
+  >
+    <div class="col4 col-lg-4 col-sm-12 col-md-4" style="max-width: 500px; min-width: 400px;">
+      <div class="box boxCellular topTierBoxes" id="t1">
+        <div class="row justify-content-center">
+          <div class="col-auto" style="margin-top: 10px; margin-bottom: 30px">
+            <img
+              src="../../assets/cellular-network.png"
+              width="60"
+              height="60"
+            />
+          </div>
+          <div class="row justify-content-center" style="margin-bottom: 50px">
+            <div class="col-auto">
+              <h1 style="font-weight: 700; font-size: 65px; color: #c2c2c3">
+                ON
+              </h1>
+            </div>
+            <div class="col-auto">
+              <h1 style="font-weight: 700; font-size: 65px; color: #c2c2c3">
+                OFF
+              </h1>
+            </div>
+          </div>
+          <div class="row justify-content-center" style="margin-bottom: 30px">
+            <div class="col-12" style="text-align: center">
+              <h3 style="font-weight: 700; margin-bottom: 0.2rem">CELLULAR</h3>
+              <h3 style="font-weight: 700">STATUS</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col4 col-lg-4 col-md-4 col-sm-12" style="max-width: 500px; min-width: 400px;">
+      <div class="box boxPressure topTierBoxes">
+        <div
+          class="row justify-content-center"
+        >
+          <div class="col-auto"  style="margin-top: 10px; margin-bottom: 30px">
+            <img src="../../assets/guage.png" width="60" height="60" />
+          </div>
+        <div class="row justify-content-center" style="margin-bottom: 50px">
+          <div class="col-auto">
+            <h1
+              style="
+                font-weight: 700;
+                font-size: 65px;
+                color: rgb(53, 168, 203);
+              "
+              [innerHTML]="this.systemPressure + ' psi'"
+            ></h1>
+          </div>
+        </div>
+        <div class="row justify-content-center" style="margin-bottom: 30px">
+          <div class="col-auto" style="text-align: center">
+            <h3 style="font-weight: 700; margin-bottom: 0.2rem">MAIN SYSTEM</h3>
+            <h3 style="font-weight: 700">PRESSURE</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class=" col4 col-lg-4 col-md-4 col-sm-12" style="max-width: 420px; min-width: 400px;">
+      <div class="box boxLighting topTierBoxes">
+        <div class="row justify-content-center">
+          <div class="col-auto" style="margin-top: 14px; margin-bottom: 20px">
+            <img src="../../assets/lightBulb.png" width="50" height="50" />
+          </div>
+          <div class="row justify-content-center" style="margin-bottom: 16px">
+            <div class="col-auto">
+              <button
+                style="
+                  font-weight: 750;
+                  font-size: 30px;
+                  height: 140px;
+                  width: 140px;
+                  background-color: #39497d;
+                  color: white;
+                  line-height: 230px;
+                "
+              >
+                ENABLE
+              </button>
+            </div>
+          </div>
+          <div class="row justify-content-center" style="margin-bottom: 30px">
+            <div class="col-auto" style="text-align: center">
+              <h3 style="font-weight: 700; margin-bottom: 0.2rem">SYSTEM</h3>
+              <h3 style="font-weight: 700">LIGHTING</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row"  style="
+  padding-bottom: 20px;
+  white-space: nowrap;
+  width: auto;
+">
+    <div class="col4 col-lg-4 col-md-4 col-sm-12" style="max-width: 500px; min-width: 400px;">
+      <div class="box boxHours" id="b1">
+        <div class="row justify-content-around">
+          <div class="col-auto">
+            <h5 style="font-weight: 750; margin-top: 10px">
+              TOTAL <br />
+              SYSTEM <br />
+              HOURS
+            </h5>
+          </div>
+          <div class="col-auto">
+            <h2
+              style="font-weight: 750; margin-top: 25px"
+              [innerHTML]="this.hours"
+            ></h2>
+          </div>
+          <div class="col-auto">
+            <img
+              src="../../assets/clock.jpg"
+              style="margin-top: 10px"
+              height="70"
+              width="70"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="box boxHours" id="b11" style="margin-top: -11px;">
+        <div class="row justify-content-end">
+          <div
+            class="col-auto"
+            style="margin-right: 25px; margin-top: 10px; margin-bottom: 5px"
+          >
+            <h5 style="width: fit-content; display: inline-block">
+              Cycle Count
+            </h5>
+            <button
+              style="
+                margin-left: 10px;
+                background-color: black;
+                color: white;
+                margin-right: 20px;
+              "
+            >
+              Zero Count
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-4" style="background-color: red">
+            <h5
+              style="
+                font-weight: 700;
+                display: inline-block;
+                width: max-content;
+                margin-bottom: 2px;
+                margin-top: 3px;
+              "
+            >
+              Well #1
+            </h5>
+            <h5
+              style="
+                font-weight: 700;
+                width: max-content;
+                float: right;
+                margin-right: 15px;
+                margin-bottom: 2px;
+                margin-top: 3px;
+              "
+              [innerHTML]="this.cycleCount[0]"
+            ></h5>
+          </div>
+          <div class="col-4" style="background-color: rgb(91, 157, 250)">
+            <h5
+              style="
+                font-weight: 700;
+                display: inline-block;
+                width: max-content;
+                margin-bottom: 2px;
+                margin-top: 3px;
+              "
+            >
+              Well #3
+            </h5>
+            <h5
+              style="
+                font-weight: 700;
+                width: max-content;
+                float: right;
+                margin-right: 15px;
+                margin-bottom: 2px;
+                margin-top: 3px;
+              "
+              [innerHTML]="this.cycleCount[1]"
+            ></h5>
+          </div>
+        </div>
+        <div
+          class="row justify-content-evenly"
+          style="margin-top: 10px; margin-bottom: 15px"
+        >
+          <div
+            class="col-4"
+            style="background-color: white; border-style: solid"
+          >
+            <h5
+              style="
+                font-weight: 700;
+                display: inline-block;
+                width: max-content;
+                margin-bottom: 2px;
+                margin-top: 3px;
+              "
+            >
+              Well #2
+            </h5>
+            <h5
+              style="
+                font-weight: 700;
+                width: max-content;
+                float: right;
+                margin-right: 15px;
+                margin-bottom: 2px;
+                margin-top: 3px;
+              "
+              [innerHTML]="this.cycleCount[2]"
+            ></h5>
+          </div>
+          <div class="col-4" style="background-color: rgb(224, 251, 16)">
+            <h5
+              style="
+                font-weight: 700;
+                display: inline-block;
+                width: max-content;
+                margin-bottom: 2px;
+                margin-top: 3px;
+              "
+            >
+              Well #4
+            </h5>
+            <h5
+              style="
+                font-weight: 700;
+                width: max-content;
+                float: right;
+                margin-right: 15px;
+                margin-bottom: 2px;
+                margin-top: 3px;
+              "
+              [innerHTML]="this.cycleCount[3]"
+            ></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col4 col-lg-4 col-md-4 col-sm-12" style="max-width: 500px; min-width: 400px;">
+      <div class="box boxFilter" id="b2" style="margin-bottom: 25px">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <h2 style="text-align: center; font-weight: 600; margin-bottom: 0">
+              Filter Status
+            </h2>
+            <h1 style="color: red; font-weight: 700">Return Filter</h1>
+          </div>
+        </div>
+      </div>
+      <div class="box boxFilter" id="b22">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <h2 style="text-align: center; font-weight: 600; margin-bottom: 0">
+              Filter Status
+            </h2>
+            <h1 style="color: red; font-weight: 700">Pressure Filter</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col4 col-lg-4 col-md-4 col-sm-12" style="max-width: 500px; min-width: 400px;">
+      <div class="box boxTemp" id="b3" style="height: 274px">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <h2 style="text-align: center; font-weight: 600; margin-top: 10px">
+              Hydraulic Oil Temperature
+            </h2>
+            <h1
+              style="
+                margin-top: 40px;
+                font-size: 60px;
+                color: rgb(16, 195, 52);
+                font-weight: 700;
+                text-align: center;
+              "
+              [innerHTML]="this.hydraulicTemp + ' F'"
+            ></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

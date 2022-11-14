@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router'
 
 @Component({
   selector: 'app-fhe',
@@ -8,8 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class FHEComponent implements OnInit {
   displayWellPressure = true;
   displayQuickTest = false
-  constructor() { }
-
+ 
   ngOnInit(): void {
   }
 

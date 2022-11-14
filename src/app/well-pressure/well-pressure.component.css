@@ -1,55 +1,67 @@
-.root{
-    margin-top: 50px;
+.root {
+  margin-top: 15px;
 }
 
-.wellPressureCol { 
-    height: 870px;
-    min-width: 330px; 
-    max-width: 460px;
-    padding: 0;
+.wellPressureCol {
+  height: 72vh;
+  min-width: 330px;
+  max-width: 460px;
+  padding: 0;
 }
 
-.wellPressure{
-    margin: 5px;
-    height: inherit;
+.wellPressure {
+  margin: 5px;
+  height: inherit;
 }
 
-.wellPressure1{
-    background-color: red;
+.wellPressure1 {
+  background-color: red;
 }
 
-.wellPressure2{
-    background-color: beige;
+.wellPressure2 {
+  background-color: beige;
 }
 
-.wellPressure3{
-    background-color: rgb(62, 62, 206);
+.wellPressure3 {
+  background-color: rgb(62, 62, 206);
 }
 
-.wellPressure4{
-    background-color: rgb(255, 149, 0);
+.wellPressure4 {
+  background-color: rgb(255, 149, 0);
 }
 
-.number{
-    display: inline-block;
-    width: fit-content;
-    margin: 5px 0px 6px 0px;
-    padding: 0;
+.number {
+  display: inline-block;
+  width: fit-content;
+  margin: 5px 0px 6px 0px;
+  padding: 0;
+  font-size: 2.1rem;
 }
 
 .wellPressureLabel {
-    display: inline-block;
-    width: fit-content;
-    margin-top: 23px;
-    vertical-align: top;
-    margin-left: 15px;
+  display: inline-block;
+  width: fit-content;
+  margin-top: 16px;
+  vertical-align: top;
+  margin-left: 15px;
 }
 
 .ZeroButton {
-    background-color: #39397D;
-    height: 46px;
-    width: 63px;
-    font-size: larger;
-    color: white;
-    font-weight: 800;
+  background-color: #39397d;
+  height: 46px;
+  width: 63px;
+  font-size: larger;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  padding: 1px;
+}
+
+@media only screen and (max-width: 600px) and (max-height: 800px) {
+  .wellPressureCol {
+    height: 65vh;
+    min-width: 330px;
+    max-width: 460px;
+    padding: 0;
+  }
 }

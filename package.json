@@ -25,6 +25,7 @@
     "bootstrap": "^5.2.0",
     "d3-scale": "^4.0.2",
     "firebase": "^9.13.0",
+    "firebase-admin": "^11.2.0",
     "progressbar.js": "^1.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

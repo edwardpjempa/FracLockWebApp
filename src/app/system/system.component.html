@@ -1,12 +1,56 @@
-<div class="root">
-  <section>
-    <button
-      type="button"
-      class="btn btn-primary btn-lg button"
-      *ngFor="let device of devices"
-      [routerLink]="['./FHE/WellPressure']"
-    >
-      {{ device }}
-    </button>
-  </section>
+<div class="container" style="margin-top: 130px; background-color: #39497d">
+  <div class="row">
+    <div class="col-auto">
+      <h1 style="color: white; font-weight: 700">SYSTEMS</h1>
+    </div>
+  </div>
+  <br />
+  <div class="row justify-content-center">
+    <div class="col-12" style="overflow-x: auto">
+      <table style="flex-wrap: nowrap; overflow-x: auto; width: inherit">
+        <tr
+          style="
+            border-radius: 30px;
+            height: 45px;
+            background-image: linear-gradient(
+              rgb(110, 167, 206),
+              rgb(96, 123, 150)
+            );
+            color: white;
+          "
+        >
+          <th style="padding-left: 20px;">Device</th>
+          <th>Pressure 1</th>
+          <th>Pressure 2</th>
+          <th>Pressure 3</th>
+          <th>Pressure 4</th>
+        </tr>
+        <tr
+          style="
+            background-color: rgb(217, 217, 217);
+            border-style: solid;
+            border-width: 0.01rem;
+          "
+          *ngFor="let device of devices"
+          (click)="selectedDevice($event, device['device'])"
+        >
+          <td class="deviceTD" style="min-width: 235px;">
+            <input id="id{{device['device']}}" value="{{device['name'] }}" style="display: none; width: 69%; background-color: #e8e8e8;"/>
+            <p style="width: max-content; margin: 0; font-size: large;" id="{{ device['device'] }}">{{ device["name"] }}</p>
+            <p style="width:min-content; font-size: small; margin: 0; color:#989898" id="{{ device['device'] }}Address">{{ device["device"] }}</p>
+            <button
+              style="float: right; margin-top: -35px;"
+              id="editButton{{ device['device'] }}"
+              (click)="changee(device['device']); editName($event, device['device'], device['name'])"
+              
+            >edit</button>
+          </td>
+          <td class="pressureTD">{{ device["P1value"] }} PSI</td>
+          <td class="pressureTD">{{ device["P2value"] }} PSI</td>
+          <td class="pressureTD">{{ device["P3value"] }} PSI</td>
+          <td class="pressureTD">{{ device["P4value"] }} PSI</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>
